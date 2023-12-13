@@ -70,6 +70,7 @@ body {
 .link {
   color: rgb(160, 227, 236);
   transition: color 0.3s;
+  cursor: pointer;
 }
 .link:hover {
   color: rgb(182, 126, 228);
