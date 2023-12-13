@@ -186,6 +186,7 @@ section, footer {
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 .starting .starting__buttons-item a {
   width: 100%;
