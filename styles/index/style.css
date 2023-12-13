@@ -15,23 +15,8 @@
 }
 @font-face {
   font-family: "Robotic";
-  src: url("overpass_mono/OverpassMono-Light.ttf");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Robotic";
   src: url("overpass_mono/OverpassMono-Regular.ttf");
   font-weight: normal;
-}
-@font-face {
-  font-family: "Robotic";
-  src: url("overpass_mono/OverpassMono-Medium.ttf");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Robotic";
-  src: url("overpass_mono/OverpassMono-SemiBold.ttf");
-  font-weight: 700;
 }
 @font-face {
   font-family: "Robotic";
@@ -48,6 +33,10 @@ br {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+a {
+  all: unset;
 }
 
 body {
@@ -209,9 +198,6 @@ section, footer {
   text-decoration: none;
   text-align: center;
   transition: color 0.3s;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 .starting .starting__buttons-item:hover {
   background-color: rgb(160, 227, 236);
