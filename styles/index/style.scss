@@ -1,0 +1,377 @@
+@import 'animation.scss';
+
+@font-face {
+    font-family: "Robotic";
+    src: url("overpass_mono/OverpassMono-Light.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Robotic";
+    src: url("overpass_mono/OverpassMono-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Robotic";
+    src: url("overpass_mono/OverpassMono-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Robotic";
+    src: url("overpass_mono/OverpassMono-SemiBold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Robotic";
+    src: url("overpass_mono/OverpassMono-Bold.ttf");
+    font-weight: bold;
+}
+
+// little definitions
+
+img {
+    user-select: none;
+}
+
+br {
+    user-select: none;
+}
+
+body {
+    margin: 0;
+}
+
+.text {
+    color: white;
+    font-family: "Robotic", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    &::selection {
+        color: rgb(29, 29, 29);
+        background-color: rgb(99, 99, 99);
+        transition: background-color 0.5s ease;
+        &::content {
+            font-weight: bold;
+        }
+    }
+}
+
+.link {
+    color: rgb(160, 227, 236);
+    transition: color 0.3s;
+    &:hover {
+        color: rgb(182, 126, 228);
+    }
+    &::selection {
+        background-color: rgb(160, 227, 236);
+    }
+}
+
+// animations initializing
+
+.section__animation {
+    &:hover {
+        animation-name: section_hover;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 1;
+    }
+}
+
+// sections
+
+section, footer {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.wrapper {
+    width: 80%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    position: fixed;
+    align-items: center;
+    box-shadow: 0 10px 40px 3px rgb(31, 31, 31);
+    margin-top: 0;
+    z-index: 10;
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        &-item {
+            margin: 0 25px;
+            cursor: pointer;
+            .text {
+                font-weight: bold;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.about {
+    background-color: rgb(24, 24, 24);
+    &__description {
+        font-size: 25px;
+        color: rgb(226, 226, 226);
+        cursor: pointer;
+        text-align: center;
+    }
+    &__mouseeffect {
+        position: absolute;
+        display: none;
+        width: 50px;
+        height: 50px;
+        background-color: white;
+    }
+}
+
+.modules {
+    background-color: rgb(15, 15, 15);
+    &__description {
+        text-align: right;
+        cursor: help;
+        width: 100%;
+        &_left {
+            text-align: left;
+        }
+    }
+}
+
+.starting {
+    background-color: rgb(24, 24, 24);
+    .wrapper {
+        flex-direction: column;
+    }
+    &__description {
+        width: 50%;
+        text-align: center;
+    }
+    .starting__buttons {
+        margin-top: 60px;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        &-item {
+            width: 40%;
+            height: 100px;
+            background-color: rgb(151, 84, 206);
+            padding: 0 10px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s;
+            a {
+                width: 100%;
+                height: 100%;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                text-align: center;
+                transition: color 0.3s;
+                user-select: none;
+            }
+            &:hover {
+                background-color: rgb(160, 227, 236); // rgb(113, 41, 172)
+                a {
+                    color: rgb(0, 0, 0); // rgb(156, 156, 156)
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    background-color: rgb(15, 15, 15);
+    .wrapper {
+        flex-direction: column;
+    }
+    &__telegram__icon {
+        width: 20%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__description {
+        margin-top: 40px;
+        width: 50%;
+        text-align: center;
+    }
+}
+
+.footer {
+    height: 150px;
+    background-color: rgb(24, 24, 24);
+    .wrapper {
+        width: 600px;
+        height: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1400px)
+{
+    .modules {
+        .wrapper {
+            width: 90%;
+        }
+        &__description {
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .modules {
+        .wrapper {
+            width: 70%;
+            flex-direction: column;
+        }
+        .shield {
+            position: absolute;
+            opacity: 0.1;
+        }
+        &__description {
+            width: 60%;
+            font-size: 18px;
+            margin: 25px 0;
+            text-align: center;
+        }
+    }
+    .starting {
+        &__description {
+            font-size: 19px;
+            width: 80%;
+        }
+        &__buttons {
+            width: 100%!important;
+            &-item {
+                height: 67px!important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    .contact {
+        &__description {
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        height: 490px;
+        &__description {
+            font-size: 19px;
+        }
+    }
+    .modules {
+        &__description {
+            width: 81%;
+        }
+    }
+    .contact {
+        .wrapper {
+            width: 85%;
+        }
+        &__telegram__icon {
+            width: 25%;
+        }
+    }
+    .footer {
+        .wrapper {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        height: 130px;
+        &__wrapper {
+            flex-direction: column;
+            justify-content: center;
+            &-item {
+                display: flex;
+                justify-content: center;
+                margin: 2px 0;
+            }
+        }
+    }
+    .about {
+        height: 650px;
+        &__description {
+            font-size: 16px;
+        }
+    }
+    .modules {
+        height: 640px;
+        &__description {
+            width: 100%;
+            font-size: 16px;
+            margin: 12px 0;
+            a {
+                font-size: 17px;
+            }
+        }
+        .shield {
+            width: 100%;
+        }
+    }
+    .starting {
+        &__description {
+            font-size: 16px;
+            width: 100%;
+        }
+        &__buttons {
+            flex-direction: column;
+            &-item {
+                width: 100%!important;
+                margin-top: 16px;
+            }
+        }
+    }
+    .contact {
+        height: 500px;
+        &__telegram__icon {
+            width: 32%;
+        }
+        &__description {
+            width: 100%;
+            font-size: 17px;
+            a {
+                font-size: 16
+            }
+        }
+    }
+    .footer {
+        &__text {
+            font-size: 15px;
+        }
+    }
+}
+
