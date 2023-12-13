@@ -1,0 +1,120 @@
+@media screen and (max-width: 1400px) {
+  .modules .wrapper {
+    width: 90%;
+  }
+  .modules__description {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .modules .wrapper {
+    width: 70%;
+    flex-direction: column;
+  }
+  .modules .shield {
+    position: absolute;
+    opacity: 0.1;
+  }
+  .modules__description {
+    width: 60%;
+    font-size: 18px;
+    margin: 25px 0;
+    text-align: center;
+  }
+  .starting__description {
+    font-size: 19px;
+    width: 80%;
+  }
+  .starting__buttons {
+    width: 100% !important;
+  }
+  .starting__buttons-item {
+    height: 67px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .contact__description {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about {
+    height: 490px;
+  }
+  .about__description {
+    font-size: 19px;
+  }
+  .modules__description {
+    width: 81%;
+  }
+  .contact .wrapper {
+    width: 85%;
+  }
+  .contact__telegram__icon {
+    width: 25%;
+  }
+  .footer .wrapper {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header {
+    height: 130px;
+  }
+  .header__wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header__wrapper-item {
+    display: flex;
+    justify-content: center;
+    margin: 2px 0;
+  }
+  .about {
+    height: 650px;
+  }
+  .about__description {
+    font-size: 16px;
+  }
+  .modules {
+    height: 640px;
+  }
+  .modules__description {
+    width: 100%;
+    font-size: 16px;
+    margin: 12px 0;
+  }
+  .modules__description a {
+    font-size: 17px;
+  }
+  .modules .shield {
+    width: 100%;
+  }
+  .starting__description {
+    font-size: 16px;
+    width: 100%;
+  }
+  .starting__buttons {
+    flex-direction: column;
+  }
+  .starting__buttons-item {
+    width: 100% !important;
+    margin-top: 16px;
+  }
+  .contact {
+    height: 500px;
+  }
+  .contact__telegram__icon {
+    width: 32%;
+  }
+  .contact__description {
+    width: 100%;
+    font-size: 17px;
+  }
+  .contact__description a {
+    font-size: 16;
+  }
+  .footer__text {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=media.css.map */
