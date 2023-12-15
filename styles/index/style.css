@@ -72,7 +72,7 @@ body {
   transition: color 0.3s;
   cursor: pointer;
 }
-.link:hover {
+.link:hover, .link:active {
   color: rgb(182, 126, 228);
 }
 .link::-moz-selection {

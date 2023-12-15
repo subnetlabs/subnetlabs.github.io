@@ -49,7 +49,7 @@ body {
     color: rgb(160, 227, 236);
     transition: color 0.3s;
     cursor: pointer;
-    &:hover {
+    &:hover, &:active {
         color: rgb(182, 126, 228);
     }
     &::selection {
