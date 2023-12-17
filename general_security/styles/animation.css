@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@keyframes section_hover {
+  0% {
+    opacity: 1; /* Начальное состояние: полностью видимый */
+  }
+  10% {
+    opacity: 0.98;
+  }
+  20% {
+    opacity: 0.98;
+  }
+  25% {
+    opacity: 1; /* Конец анимации: снова полностью видимый */
+  }
+}/*# sourceMappingURL=animation.css.map */

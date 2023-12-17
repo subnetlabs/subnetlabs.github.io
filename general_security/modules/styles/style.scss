@@ -1,0 +1,154 @@
+@import 'animation.scss';
+
+@font-face {
+    font-family: "Robotic";
+    src: url("overpass_mono/OverpassMono-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Robotic";
+    src: url("overpass_mono/OverpassMono-Bold.ttf");
+    font-weight: bold;
+}
+
+$darker-background: rgb(15, 15, 15);
+$lighter-background: rgb(24, 24, 24);
+
+$text-selection-color: rgb(99, 99, 99);
+$link-color: rgb(160, 227, 236);
+$link-hovered-color: rgb(182, 126, 228);
+
+// little classes
+
+img {
+    user-select: none;
+}
+
+br {
+    user-select: none;
+}
+
+body {
+    margin: 0;
+}
+
+.text {
+    color: white;
+    font-family: "Robotic", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    &::selection {
+        color: rgb(29, 29, 29);
+        background-color: $text-selection-color;
+        transition: background-color 0.5s ease;
+        &::content {
+            font-weight: bold;
+        }
+    }
+}
+
+.link {
+    color: $link-color;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+    &:hover {
+        color: $link-hovered-color; // rgb(182, 126, 228)
+    }
+    &::selection {
+        background-color: $text-selection-color;
+    }
+}
+
+// animations initializing
+
+.section__animation {
+    &:hover {
+        animation-name: section_hover;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 1;
+    }
+}
+
+// sections
+
+section, footer {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.wrapper {
+    width: 80%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enter {
+    background-color: $darker-background;
+    &__image {
+        width: 600px;
+        position: absolute;
+        opacity: 0.05;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__infoblock {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &__title {
+            font-size: 30px;
+            span {
+                background-color: white;
+                color: black;
+                font-weight: bold;
+            }
+        }
+        &__subtitle {
+            font-size: 19px;
+            color: rgb(175, 175, 175);
+            margin-top: 5px;
+        }
+        .text {
+            text-align: center;
+        }
+    }
+
+}
+
+.data {
+    height: 100%;
+    background-color: $lighter-background;
+    padding: 100px 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    .wrapper {
+        height: 80%;
+    }
+    &__info {
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+.footer {
+    height: 150px;
+    background-color: $darker-background;
+    .wrapper {
+        width: 600px;
+        height: 100%;
+        justify-content: center;
+    }
+}
+
+@import 'media.scss';
